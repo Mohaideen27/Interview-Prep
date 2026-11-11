@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopSphere</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .navbar {
+        display: flex;
+        height: 60px;
+        padding: 0 20px;
+        background: #000;
+        color: white;
+        justify-content: space-between;
+        align-items: center;
+      }
+      nav {
+        display: flex;
+        gap: 10px;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+      }
+      main {
+        display: flex;
+        padding: 50px;
+      }
+      article {
+        width: 500px;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        border: 2px solid gray;
+        border-radius: 10px;
+        padding: 30px;
+      }
+      article img {
+        grid-row: span 4;
+      }
+      article button {
+        background-color: #000;
+        color: white;
+        font-weight: bold;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      @media (max-width: 600px) {
+        article {
+          width: 100%;
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <h2>ShopSphere</h2>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Cart</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <article class="product-card">
+        <img src="https://placehold.co/300x200" alt="Product image" />
+
+        <h2>Smart Watch</h2>
+        <p>Premium smartwatch with modern features.</p>
+        <h3>₹2,499</h3>
+
+        <button>Add to Cart</button>
+      </article>
+    </main>
+  </body>
+</html>
